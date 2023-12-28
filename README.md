@@ -1,0 +1,21 @@
+- Simple menu
+
+Press 1 to enter account details
+Press 2 to deposit
+Press 3 to withdraw
+Press 4 to show current balance
+Press 5 to cancel last transaction
+Press 6 to exit
+ 
+- If '1' is entered, you will ask the user to enter all account details (balance, owner name …etc) then save these values in an Account object
+- If '2' is entered, ask the user to enter the required amount then increase the account balance by the specified amount using an object of "Deposit"  class then print the new balance.
+- If '3' is entered, ask the user to enter the required amount then decrease the account balance by the specified amount using an object of "Withdraw" class then print the new balance
+- If '4' is entered, ask the user to enter the required currency type 'U for USD, E for euro' then print the current balance according to the specified currencyType
+- If '5' is entered cancel the last transaction and display the new balance.
+
+
+- Notes
+
+"execute" method of each class will return the new account balance.
+"execute" method in balance inquiry will return the account balance in the specified currencyType, currencyType could be "U" for USD or "E" for euro
+"cancelTransaction" of each class will be opposite to the execute method, i.e. "execute" method in case of "Deposit" class will increase the balance of the account by the specified amount while "cancelTrasnaction" will decrease the balance by the specified amount.
