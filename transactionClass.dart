@@ -32,9 +32,13 @@ class withDraw extends Transaction implements RollBack {
   withDraw(this.amount);
 
   @override
-  double execute(Account account) {
-    account.balance = account.balance - (this.amount).toInt();
-    return (account.balance + 0.0);
+   double execute(Account account) {
+    if (this.amount >= 0 && this.amount <= account.balance ) {
+      account.balance =account.balance- this.amount.toInt();
+      return account.balance + 0.0;
+    } else {
+      return -1.0;
+    }
   }
 
   @override
@@ -51,8 +55,12 @@ class deposite extends Transaction implements RollBack {
 
   @override
   double execute(Account account) {
-    account.balance = account.balance + this.amount.toInt();
-    return (account.balance + 0.0);
+     if (this.amount >= 0) {
+      account.balance =account.balance+ this.amount.toInt();
+      return account.balance + 0.0;
+    } else {
+      return -1.0;
+    }
   }
 
   @override
